@@ -14,19 +14,27 @@ class TasksTableViewCell: UITableViewCell {
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .left
+        label.adjustsFontForContentSizeCategory = true
+        label.font = UIFont.preferredFont(forTextStyle: .body)
         return label
     }()
-    
+
     private let descriptionLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .left
+        label.adjustsFontForContentSizeCategory = true
+        label.font = UIFont.preferredFont(forTextStyle: .footnote)
         return label
     }()
     
     private lazy var stackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [titleLabel])
         stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.isLayoutMarginsRelativeArrangement = true
+        stackView.layoutMargins = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
+        stackView.spacing = 8
         stackView.axis = .vertical
+        stackView.distribution = .fill
         return stackView
     }()
     
@@ -45,21 +53,24 @@ class TasksTableViewCell: UITableViewCell {
     }
     
     public func setDescription(_ description: String?) {
-        descriptionLabel.text = description
-        stackView.addArrangedSubview(descriptionLabel)
+        if description != nil {
+            descriptionLabel.text = description
+            stackView.addArrangedSubview(descriptionLabel)
+        }
     }
     
     private func setupView() {
-        contentView.addSubview(stackView)
+        setupStackView()
     }
     
     private func setupStackView() {
+        contentView.addSubview(stackView)
         let margins = contentView.layoutMarginsGuide
         NSLayoutConstraint.activate([
-            stackView.leadingAnchor.constraint(equalTo: margins.leadingAnchor),
-            stackView.topAnchor.constraint(equalTo: margins.topAnchor),
-            stackView.trailingAnchor.constraint(equalTo: margins.trailingAnchor),
-            stackView.bottomAnchor.constraint(equalTo: margins.bottomAnchor)
+            margins.leadingAnchor.constraint(equalTo: stackView.leadingAnchor),
+            margins.topAnchor.constraint(equalTo: stackView.topAnchor),
+            margins.trailingAnchor.constraint(equalTo: stackView.trailingAnchor),
+            margins.bottomAnchor.constraint(equalTo: stackView.bottomAnchor)
         ])
     }
 }

@@ -34,7 +34,7 @@ class TasksViewController: UIViewController {
         let tableView = UITableView()
 
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.rowHeight = UITableView.automaticDimension
+        
         return tableView
     }()
     
@@ -51,6 +51,8 @@ class TasksViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tasksTableView.delegate = self
+        tasksTableView.dataSource = self
         setupView()
     }
     
@@ -59,8 +61,6 @@ class TasksViewController: UIViewController {
     }
     
     private func setupTasksTableView() {
-        tasksTableView.delegate = self
-        tasksTableView.dataSource = self
         tasksTableView.register(
             TasksTableViewCell.self,
             forCellReuseIdentifier: TasksTableViewCell.reuseIdentifier)
