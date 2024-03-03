@@ -17,4 +17,7 @@ extension TasksViewController: UITableViewDelegate {
         UITableView.automaticDimension
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
 }

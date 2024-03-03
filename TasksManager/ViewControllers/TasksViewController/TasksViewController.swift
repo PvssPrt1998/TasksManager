@@ -8,25 +8,20 @@
 import UIKit
 
 protocol TasksViewControllerDelegate: AnyObject {
-    //TODO: - Подобрать подходящее название для метода
-    func action(_ viewController: TasksViewController, onDismissed: (()->Void)?)
+    func openTask(_ viewController: TasksViewController, onDismissed: (()->Void)?)
 }
 
 class TasksViewController: UIViewController {
     
     var taskArray = [
-        Subtask(title: "Task1", description: "Description1"),
-        Subtask(title: "Task2", description: "Description2"),
-        Subtask(title: "Task3", description: "Description3"),
-        Subtask(title: "Task4", description: "Description4"),
-        Subtask(title: "Task5", description: "Description5"),
-        Subtask(title: "Task6", description: "Description6"),
-        Subtask(title: "Task7", description: "Description7")
+        Task(title: "Task1", description: "Description1"),
+        Task(title: "Task2", description: "Description2"),
+        Task(title: "Task3", description: "Description3"),
+        Task(title: "Task4", description: "Description4"),
+        Task(title: "Task5", description: "Description5"),
+        Task(title: "Task6", description: "Description6"),
+        Task(title: "Task7", description: "Description7")
     ]
-    
-    enum TasksViewControllerError: Error {
-        case invalidCreationCustomTableViewCell
-    }
     
     public weak var delegate: TasksViewControllerDelegate?
     
@@ -44,15 +39,12 @@ class TasksViewController: UIViewController {
         super.init(nibName: nil, bundle: nil)
     }
     
-    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tasksTableView.delegate = self
-        tasksTableView.dataSource = self
         setupView()
     }
     
@@ -61,6 +53,8 @@ class TasksViewController: UIViewController {
     }
     
     private func setupTasksTableView() {
+        tasksTableView.delegate = self
+        tasksTableView.dataSource = self
         tasksTableView.register(
             TasksTableViewCell.self,
             forCellReuseIdentifier: TasksTableViewCell.reuseIdentifier)

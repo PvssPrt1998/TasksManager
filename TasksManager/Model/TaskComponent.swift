@@ -12,6 +12,7 @@ protocol TaskComponent {
     func getDescription() -> String?
     func add(taskComponent: TaskComponent)
     func remove(taskComponent: TaskComponent)
+    func isFinalTask() -> Bool
 }
 
 extension TaskComponent {

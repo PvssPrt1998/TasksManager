@@ -24,7 +24,7 @@ class TasksCoordinator: Coordinator {
 }
 
 extension TasksCoordinator: TasksViewControllerDelegate {
-    func action(_ viewController: TasksViewController, onDismissed: (() -> Void)?) {
+    func openTask(_ viewController: TasksViewController, onDismissed: (() -> Void)?) {
         
     }
 }

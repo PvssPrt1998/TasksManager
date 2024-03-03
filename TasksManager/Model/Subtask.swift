@@ -24,4 +24,8 @@ class Subtask: TaskComponent {
     func getDescription() -> String? {
         return description
     }
+    
+    func isFinalTask() -> Bool {
+        true
+    }
 }

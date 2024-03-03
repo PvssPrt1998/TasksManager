@@ -11,6 +11,11 @@ class TasksTableViewCell: UITableViewCell {
     
     static let reuseIdentifier = "TasksTableViewCell"
     
+    enum TaskType {
+        case final
+        case composite
+    }
+    
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .left
@@ -27,17 +32,31 @@ class TasksTableViewCell: UITableViewCell {
         return label
     }()
     
-    private lazy var stackView: UIStackView = {
+    private let arrowImageView: UIImageView = {
+        let image = UIImage(systemName: "chevron.right")
+        let imageView = UIImageView(image: image)
+        imageView.backgroundColor = .green
+        imageView.contentMode = .scaleAspectFit
+        imageView.setContentHuggingPriority(.defaultHigh, for: .horizontal)
+        return imageView
+    }()
+    
+    private lazy var textStackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [titleLabel])
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.isLayoutMarginsRelativeArrangement = true
-        stackView.layoutMargins = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
         stackView.spacing = 8
         stackView.axis = .vertical
         stackView.distribution = .fill
         return stackView
     }()
     
+    private lazy var containerStackView: UIStackView = {
+        let stackView = UIStackView(arrangedSubviews: [textStackView])
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.layoutMargins = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
+        stackView.axis = .horizontal
+        stackView.distribution = .fill
+        return stackView
+    }()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -55,7 +74,13 @@ class TasksTableViewCell: UITableViewCell {
     public func setDescription(_ description: String?) {
         if description != nil {
             descriptionLabel.text = description
-            stackView.addArrangedSubview(descriptionLabel)
+            textStackView.addArrangedSubview(descriptionLabel)
+        }
+    }
+    
+    public func taskType(_ type: TaskType) {
+        if type == .composite {
+            containerStackView.addArrangedSubview(arrowImageView)
         }
     }
     
@@ -64,13 +89,14 @@ class TasksTableViewCell: UITableViewCell {
     }
     
     private func setupStackView() {
-        contentView.addSubview(stackView)
+        contentView.addSubview(containerStackView)
+        
         let margins = contentView.layoutMarginsGuide
         NSLayoutConstraint.activate([
-            margins.leadingAnchor.constraint(equalTo: stackView.leadingAnchor),
-            margins.topAnchor.constraint(equalTo: stackView.topAnchor),
-            margins.trailingAnchor.constraint(equalTo: stackView.trailingAnchor),
-            margins.bottomAnchor.constraint(equalTo: stackView.bottomAnchor)
+            margins.leadingAnchor.constraint(equalTo: containerStackView.leadingAnchor),
+            margins.topAnchor.constraint(equalTo: containerStackView.topAnchor),
+            margins.trailingAnchor.constraint(equalTo: containerStackView.trailingAnchor),
+            margins.bottomAnchor.constraint(equalTo: containerStackView.bottomAnchor)
         ])
     }
 }

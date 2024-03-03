@@ -63,6 +63,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		99E5E2B92B9442DE008F363A /* ParticularTaskWithSubtasksViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ParticularTaskWithSubtasksViewController;
+			sourceTree = "<group>";
+		};
 		99FAC0922B7E2592009239A7 = {
 			isa = PBXGroup;
 			children = (
@@ -138,6 +145,7 @@
 		99FAC0C52B7E52F2009239A7 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				99E5E2B92B9442DE008F363A /* ParticularTaskWithSubtasksViewController */,
 				99FAC0C62B7E5314009239A7 /* TasksViewController */,
 			);
 			path = ViewControllers;

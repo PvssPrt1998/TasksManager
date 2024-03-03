@@ -34,4 +34,8 @@ class Task: TaskComponent {
     func remove(taskComponent: TaskComponent) {
         //TODO: - describe remove method
     }
+    
+    func isFinalTask() -> Bool {
+        taskComponents.count == 0 ? true : false
+    }
 }
