@@ -25,11 +25,15 @@ class TasksViewController: UIViewController {
     
     public weak var delegate: TasksViewControllerDelegate?
     
+    let addTaskButton: AddTaskButton = {
+        let button = AddTaskButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    
     let tasksTableView: UITableView = {
         let tableView = UITableView()
-
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        
         return tableView
     }()
     
@@ -48,8 +52,13 @@ class TasksViewController: UIViewController {
         setupView()
     }
     
+    @objc func addButtonAction() {
+        print("addButtonPressed")
+    }
+    
     private func setupView() {
         setupTasksTableView()
+        setupAddTaskButton()
     }
     
     private func setupTasksTableView() {
@@ -65,6 +74,20 @@ class TasksViewController: UIViewController {
             tasksTableView.topAnchor.constraint(equalTo: view.topAnchor),
             tasksTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             tasksTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
+    }
+    
+    private func setupAddTaskButton() {
+        addTaskButton.addTarget(self, action: #selector(addButtonAction), for: .touchUpInside)
+        
+        view.addSubview(addTaskButton)
+        
+        let margins = view.layoutMarginsGuide
+        NSLayoutConstraint.activate([
+            addTaskButton.heightAnchor.constraint(equalToConstant: 100),
+            addTaskButton.widthAnchor.constraint(equalTo: addTaskButton.heightAnchor, multiplier: 1.0),
+            margins.trailingAnchor.constraint(equalTo: addTaskButton.trailingAnchor, constant: 30),
+            margins.bottomAnchor.constraint(equalTo: addTaskButton.bottomAnchor, constant: 40)
         ])
     }
 }

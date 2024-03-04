@@ -10,6 +10,7 @@
 		99E5E2B32B932DB2008F363A /* TasksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E5E2B22B932DB2008F363A /* TasksTableViewCell.swift */; };
 		99E5E2B52B9333DD008F363A /* TasksViewController+TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E5E2B42B9333DD008F363A /* TasksViewController+TableViewDataSource.swift */; };
 		99E5E2B72B93349A008F363A /* TasksViewController+TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E5E2B62B93349A008F363A /* TasksViewController+TableViewDelegate.swift */; };
+		99E5E2BC2B960A60008F363A /* AddTaskButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E5E2BB2B960A60008F363A /* AddTaskButton.swift */; };
 		99FAC09F2B7E2592009239A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FAC09E2B7E2592009239A7 /* AppDelegate.swift */; };
 		99FAC0A12B7E2592009239A7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FAC0A02B7E2592009239A7 /* SceneDelegate.swift */; };
 		99FAC0A32B7E2592009239A7 /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FAC0A22B7E2592009239A7 /* TasksViewController.swift */; };
@@ -32,6 +33,7 @@
 		99E5E2B22B932DB2008F363A /* TasksTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksTableViewCell.swift; sourceTree = "<group>"; };
 		99E5E2B42B9333DD008F363A /* TasksViewController+TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TasksViewController+TableViewDataSource.swift"; sourceTree = "<group>"; };
 		99E5E2B62B93349A008F363A /* TasksViewController+TableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TasksViewController+TableViewDelegate.swift"; sourceTree = "<group>"; };
+		99E5E2BB2B960A60008F363A /* AddTaskButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskButton.swift; sourceTree = "<group>"; };
 		99FAC09B2B7E2592009239A7 /* TasksManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TasksManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99FAC09E2B7E2592009239A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		99FAC0A02B7E2592009239A7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +70,14 @@
 			children = (
 			);
 			path = ParticularTaskWithSubtasksViewController;
+			sourceTree = "<group>";
+		};
+		99E5E2BA2B960A4B008F363A /* UIViews */ = {
+			isa = PBXGroup;
+			children = (
+				99E5E2BB2B960A60008F363A /* AddTaskButton.swift */,
+			);
+			path = UIViews;
 			sourceTree = "<group>";
 		};
 		99FAC0922B7E2592009239A7 = {
@@ -172,6 +182,7 @@
 		99FAC0C82B7E5C12009239A7 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				99E5E2BA2B960A4B008F363A /* UIViews */,
 				99FAC0C92B7E5C2D009239A7 /* ThrowErrorHelper.swift */,
 			);
 			path = Helpers;
@@ -266,6 +277,7 @@
 			files = (
 				99FAC0BD2B7E3C61009239A7 /* TasksCoordinator.swift in Sources */,
 				99FAC0B62B7E2F0D009239A7 /* Subtask.swift in Sources */,
+				99E5E2BC2B960A60008F363A /* AddTaskButton.swift in Sources */,
 				99FAC0C32B7E4182009239A7 /* Router.swift in Sources */,
 				99FAC0BA2B7E3A29009239A7 /* TasksManager.swift in Sources */,
 				99FAC0B42B7E25B5009239A7 /* TaskComponent.swift in Sources */,
