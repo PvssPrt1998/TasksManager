@@ -42,26 +42,27 @@ final class AddTaskButton: UIButton {
     func setupDefaultLayer() {
         let cornerRadius: CGFloat = bounds.width / 2
         
-        //shadowLayer = CAShapeLayer()
-        shadowLayer.path = UIBezierPath(roundedRect: bounds, cornerRadius: cornerRadius).cgPath
-        shadowLayer.fillColor = UIColor.white.cgColor
+        let v: CGFloat = -0.99
+        let vHole: CGFloat = -1
+        
+        let p1 = UIBezierPath(roundedRect: bounds.offsetBy(dx: v, dy: v), cornerRadius: cornerRadius)
+        let hole = UIBezierPath(roundedRect: bounds.insetBy(dx: vHole, dy: vHole), cornerRadius: cornerRadius).reversing()
+        p1.append(hole)
+        shadowLayer.path = p1.cgPath
+        shadowLayer.fillColor = UIColor.clear.cgColor
         shadowLayer.shadowColor = UIColor.darkGray.cgColor
         shadowLayer.shadowPath = shadowLayer.path
-        shadowLayer.shadowOffset = CGSize(width: 2.0, height: 2.0)
-        shadowLayer.shadowOpacity = 0.8
-        shadowLayer.shadowRadius = 2
+        shadowLayer.shadowOffset = CGSize(width: 2, height: 2)
+        shadowLayer.shadowOpacity = 0.3
+        shadowLayer.shadowRadius = 1
         
         layer.cornerRadius = cornerRadius
-//        layer.insertSublayer(shadowLayer, at: 0)
-    }
-    
-    func removeShadow() {
-        shadowLayer.shadowOpacity = 0
-    }
-    
-    func returnShadow() {
-        shadowLayer.shadowOpacity = 0.8
+        layer.backgroundColor = UIColor.white.withAlphaComponent(0.6).cgColor
     }
 }
 
-
+extension Int {
+    var degreesToRadians: CGFloat {
+        return CGFloat(self) * .pi / 180
+    }
+}

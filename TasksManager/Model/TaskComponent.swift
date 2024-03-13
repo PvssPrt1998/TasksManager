@@ -8,6 +8,7 @@
 import Foundation
 
 protocol TaskComponent {
+    var head: TaskComponent? { get set }
     func getTitle() -> String
     func getDescription() -> String?
     func add(taskComponent: TaskComponent)

@@ -9,19 +9,10 @@ import UIKit
 
 protocol TasksViewControllerDelegate: AnyObject {
     func openTask(_ viewController: TasksViewController, onDismissed: (()->Void)?)
+    func addTaskButtonPressed(_ viewController: TasksViewController, onDismissed: (()->Void)?)
 }
 
 class TasksViewController: UIViewController {
-    
-    var taskArray = [
-        Task(title: "Task1", description: "Description1"),
-        Task(title: "Task2", description: "Description2"),
-        Task(title: "Task3", description: "Description3"),
-        Task(title: "Task4", description: "Description4"),
-        Task(title: "Task5", description: "Description5"),
-        Task(title: "Task6", description: "Description6"),
-        Task(title: "Task7", description: "Description7")
-    ]
     
     public weak var delegate: TasksViewControllerDelegate?
     
@@ -53,7 +44,7 @@ class TasksViewController: UIViewController {
     }
     
     @objc func addButtonAction() {
-        print("addButtonPressed")
+        delegate?.addTaskButtonPressed(self, onDismissed: nil)
     }
     
     private func setupView() {

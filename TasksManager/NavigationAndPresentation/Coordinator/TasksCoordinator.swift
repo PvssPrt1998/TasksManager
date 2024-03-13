@@ -27,4 +27,9 @@ extension TasksCoordinator: TasksViewControllerDelegate {
     func openTask(_ viewController: TasksViewController, onDismissed: (() -> Void)?) {
         
     }
+    
+    func addTaskButtonPressed(_ viewController: TasksViewController, onDismissed: (() -> Void)?) {
+        let coordinator = AddTaskCoordinator(router: router)
+        presentChild(coordinator, animated: true, onDismissed: onDismissed)
+    }
 }
