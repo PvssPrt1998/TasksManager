@@ -2,7 +2,7 @@
 //  Task+CoreDataProperties.swift
 //  TasksManager
 //
-//  Created by Николай Щербаков on 10.03.2024.
+//  Created by Николай Щербаков on 16.03.2024.
 //
 //
 
@@ -19,8 +19,8 @@ extension Task {
     @NSManaged public var headID: Int32
     @NSManaged public var title: String?
     @NSManaged public var taskDescription: String?
-    @NSManaged public var subtasksIDList: NSObject?
-    @NSManaged public var globalTasks: GlobalTasks?
+    @NSManaged public var subtasksIDList: [NSNumber]
+    @NSManaged public var objID: Int32
 
 }
 

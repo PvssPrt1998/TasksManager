@@ -11,11 +11,6 @@ class TasksTableViewCell: UITableViewCell {
     
     static let reuseIdentifier = "TasksTableViewCell"
     
-    enum TaskType {
-        case final
-        case composite
-    }
-    
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .left
@@ -35,7 +30,7 @@ class TasksTableViewCell: UITableViewCell {
     private let arrowImageView: UIImageView = {
         let image = UIImage(systemName: "chevron.right")
         let imageView = UIImageView(image: image)
-        imageView.backgroundColor = .green
+        imageView.tintColor = .gray
         imageView.contentMode = .scaleAspectFit
         imageView.setContentHuggingPriority(.defaultHigh, for: .horizontal)
         return imageView
@@ -75,17 +70,13 @@ class TasksTableViewCell: UITableViewCell {
         if description != nil {
             descriptionLabel.text = description
             textStackView.addArrangedSubview(descriptionLabel)
-        }
-    }
-    
-    public func taskType(_ type: TaskType) {
-        if type == .composite {
             containerStackView.addArrangedSubview(arrowImageView)
         }
     }
     
     private func setupView() {
         setupStackView()
+        selectionStyle = .none
     }
     
     private func setupStackView() {

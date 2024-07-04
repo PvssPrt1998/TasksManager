@@ -8,6 +8,6 @@
 import Foundation
 
 class DataManager {
-    lazy var localStorage = LocalStorage()
+    var localStorage = LocalStorage()
     lazy var remoteStorage = RemoteStorage()
 }

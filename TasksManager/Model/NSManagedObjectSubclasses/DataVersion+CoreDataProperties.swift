@@ -2,7 +2,7 @@
 //  DataVersion+CoreDataProperties.swift
 //  TasksManager
 //
-//  Created by Николай Щербаков on 10.03.2024.
+//  Created by Николай Щербаков on 28.03.2024.
 //
 //
 
@@ -17,6 +17,7 @@ extension DataVersion {
     }
 
     @NSManaged public var version: String?
+    @NSManaged public var freeID: Int32
 
 }
 

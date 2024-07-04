@@ -22,9 +22,34 @@ class NavigationRouter: NSObject, Router {
     
     func present(_ viewController: UIViewController, animated: Bool, onDismissed: (() -> Void)?) {
         onDismissForViewController[viewController] = onDismissed
+        addBackButton(to: viewController)
         navigationController.pushViewController(viewController, animated: animated)
     }
     
-    func dismiss(animated: Bool) { }
+    func dismiss(animated: Bool) { 
+        guard let viewController = navigationController.topViewController else { return }
+        print("Router Dismiss")
+        performOnDismissed(for: viewController)
+        navigationController.popViewController(animated: animated)
+    }
+    
+    @objc private func backButtonPressed() {
+        dismiss(animated: true)
+    }
+    
+    private func performOnDismissed(for viewController: UIViewController) {
+        guard let onDismiss = onDismissForViewController[viewController] else { return }
+        onDismiss()
+        onDismissForViewController[viewController] = nil
+    }
+    
+    private func addBackButton(to viewController: UIViewController) {
+        guard !navigationController.viewControllers.isEmpty else { return }
+        let image = UIImage(systemName: "chevron.left")
+        guard let image = image else { return }
+        let leftBarButton = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(backButtonPressed))
+        leftBarButton.tintColor = .black
+        viewController.navigationItem.leftBarButtonItem = leftBarButton
+    }
 }
 

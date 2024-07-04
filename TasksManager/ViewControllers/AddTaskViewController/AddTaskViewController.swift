@@ -8,12 +8,13 @@
 import UIKit
 
 protocol AddTaskViewControllerDelegate: AnyObject {
-    func addTask(_ viewController: TasksViewController, onDismissed: (()->Void)?)
+    func addTaskButtonPressed()
 }
 
 class AddTaskViewController:  UIViewController {
     
     public weak var delegate: AddTaskViewControllerDelegate?
+    var tasksManager: TasksManager
     
     let addTitleLabel: UILabel = {
         let label = UILabel()
@@ -82,9 +83,14 @@ class AddTaskViewController:  UIViewController {
         return scrollView
     }()
     
-    init(delegate: AddTaskViewControllerDelegate? = nil) {
+    init(delegate: AddTaskViewControllerDelegate? = nil, tasksManager: TasksManager) {
+        self.tasksManager = tasksManager
         self.delegate = delegate
         super.init(nibName: nil, bundle: nil)
+    }
+    
+    deinit {
+        print("AddTaskViewController deinit")
     }
     
     required init?(coder: NSCoder) {
@@ -98,7 +104,8 @@ class AddTaskViewController:  UIViewController {
     }
     
     @objc func addTaskButtonAction() {
-        print("AddTask Button Pressed")
+        tasksManager.createTask(title: addTitleTextView.text, description: addDescriptionTextView.text)
+        delegate?.addTaskButtonPressed()
     }
     
     private func setupView() {

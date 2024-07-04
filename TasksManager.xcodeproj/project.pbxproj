@@ -17,21 +17,21 @@
 		99E5E2C72B9E11FF008F363A /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E5E2C62B9E11FF008F363A /* DataManager.swift */; };
 		99E5E2C92B9E1214008F363A /* RemoteStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E5E2C82B9E1214008F363A /* RemoteStorage.swift */; };
 		99E5E2CB2B9E121E008F363A /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E5E2CA2B9E121E008F363A /* LocalStorage.swift */; };
-		99E5E2DE2B9E1544008F363A /* GlobalTasks+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E5E2D82B9E1544008F363A /* GlobalTasks+CoreDataClass.swift */; };
-		99E5E2DF2B9E1544008F363A /* GlobalTasks+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E5E2D92B9E1544008F363A /* GlobalTasks+CoreDataProperties.swift */; };
-		99E5E2E02B9E1544008F363A /* Task+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E5E2DA2B9E1544008F363A /* Task+CoreDataClass.swift */; };
-		99E5E2E12B9E1544008F363A /* Task+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E5E2DB2B9E1544008F363A /* Task+CoreDataProperties.swift */; };
-		99E5E2E22B9E1544008F363A /* DataVersion+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E5E2DC2B9E1544008F363A /* DataVersion+CoreDataClass.swift */; };
-		99E5E2E32B9E1544008F363A /* DataVersion+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E5E2DD2B9E1544008F363A /* DataVersion+CoreDataProperties.swift */; };
 		99E5E2E72BA1ED3F008F363A /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E5E2E62BA1ED3F008F363A /* CoreDataStack.swift */; };
 		99E5E2E92BA2019A008F363A /* AddTaskViewCotnroller + TextViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E5E2E82BA2019A008F363A /* AddTaskViewCotnroller + TextViewDelegate.swift */; };
+		99E5E2EB2BA4AABA008F363A /* getDateString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E5E2EA2BA4AABA008F363A /* getDateString.swift */; };
+		99E5E2FA2BA59A36008F363A /* Task+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E5E2F62BA59A36008F363A /* Task+CoreDataClass.swift */; };
+		99E5E2FB2BA59A36008F363A /* Task+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E5E2F72BA59A36008F363A /* Task+CoreDataProperties.swift */; };
+		99E5E2FF2BA5BFE3008F363A /* ServideIDEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E5E2FE2BA5BFE3008F363A /* ServideIDEnum.swift */; };
+		99E5E30A2BB5B594008F363A /* DataVersion+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E5E3082BB5B594008F363A /* DataVersion+CoreDataClass.swift */; };
+		99E5E30B2BB5B594008F363A /* DataVersion+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E5E3092BB5B594008F363A /* DataVersion+CoreDataProperties.swift */; };
+		99E5E30D2BB5C84E008F363A /* ModalNavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E5E30C2BB5C84E008F363A /* ModalNavigationRouter.swift */; };
 		99FAC09F2B7E2592009239A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FAC09E2B7E2592009239A7 /* AppDelegate.swift */; };
 		99FAC0A12B7E2592009239A7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FAC0A02B7E2592009239A7 /* SceneDelegate.swift */; };
 		99FAC0A32B7E2592009239A7 /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FAC0A22B7E2592009239A7 /* TasksViewController.swift */; };
 		99FAC0A82B7E2593009239A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99FAC0A72B7E2593009239A7 /* Assets.xcassets */; };
 		99FAC0AB2B7E2593009239A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99FAC0A92B7E2593009239A7 /* LaunchScreen.storyboard */; };
 		99FAC0B42B7E25B5009239A7 /* TaskComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FAC0B32B7E25B5009239A7 /* TaskComponent.swift */; };
-		99FAC0B62B7E2F0D009239A7 /* Subtask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FAC0B52B7E2F0D009239A7 /* Subtask.swift */; };
 		99FAC0B82B7E310A009239A7 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FAC0B72B7E310A009239A7 /* Task.swift */; };
 		99FAC0BA2B7E3A29009239A7 /* TasksManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FAC0B92B7E3A29009239A7 /* TasksManager.swift */; };
 		99FAC0BD2B7E3C61009239A7 /* TasksCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FAC0BC2B7E3C61009239A7 /* TasksCoordinator.swift */; };
@@ -54,14 +54,15 @@
 		99E5E2C62B9E11FF008F363A /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		99E5E2C82B9E1214008F363A /* RemoteStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteStorage.swift; sourceTree = "<group>"; };
 		99E5E2CA2B9E121E008F363A /* LocalStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorage.swift; sourceTree = "<group>"; };
-		99E5E2D82B9E1544008F363A /* GlobalTasks+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GlobalTasks+CoreDataClass.swift"; sourceTree = "<group>"; };
-		99E5E2D92B9E1544008F363A /* GlobalTasks+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GlobalTasks+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		99E5E2DA2B9E1544008F363A /* Task+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataClass.swift"; sourceTree = "<group>"; };
-		99E5E2DB2B9E1544008F363A /* Task+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		99E5E2DC2B9E1544008F363A /* DataVersion+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataVersion+CoreDataClass.swift"; sourceTree = "<group>"; };
-		99E5E2DD2B9E1544008F363A /* DataVersion+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataVersion+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		99E5E2E62BA1ED3F008F363A /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		99E5E2E82BA2019A008F363A /* AddTaskViewCotnroller + TextViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddTaskViewCotnroller + TextViewDelegate.swift"; sourceTree = "<group>"; };
+		99E5E2EA2BA4AABA008F363A /* getDateString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getDateString.swift; sourceTree = "<group>"; };
+		99E5E2F62BA59A36008F363A /* Task+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataClass.swift"; sourceTree = "<group>"; };
+		99E5E2F72BA59A36008F363A /* Task+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		99E5E2FE2BA5BFE3008F363A /* ServideIDEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServideIDEnum.swift; sourceTree = "<group>"; };
+		99E5E3082BB5B594008F363A /* DataVersion+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataVersion+CoreDataClass.swift"; sourceTree = "<group>"; };
+		99E5E3092BB5B594008F363A /* DataVersion+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataVersion+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		99E5E30C2BB5C84E008F363A /* ModalNavigationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalNavigationRouter.swift; sourceTree = "<group>"; };
 		99FAC09B2B7E2592009239A7 /* TasksManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TasksManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99FAC09E2B7E2592009239A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		99FAC0A02B7E2592009239A7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,7 +71,6 @@
 		99FAC0AA2B7E2593009239A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		99FAC0AC2B7E2593009239A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		99FAC0B32B7E25B5009239A7 /* TaskComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskComponent.swift; sourceTree = "<group>"; };
-		99FAC0B52B7E2F0D009239A7 /* Subtask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subtask.swift; sourceTree = "<group>"; };
 		99FAC0B72B7E310A009239A7 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		99FAC0B92B7E3A29009239A7 /* TasksManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksManager.swift; sourceTree = "<group>"; };
 		99FAC0BC2B7E3C61009239A7 /* TasksCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksCoordinator.swift; sourceTree = "<group>"; };
@@ -101,13 +101,6 @@
 			path = UIViews;
 			sourceTree = "<group>";
 		};
-		99E5E2BD2B99B850008F363A /* Tree */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Tree;
-			sourceTree = "<group>";
-		};
 		99E5E2BE2B99B9EF008F363A /* AddTaskViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -120,12 +113,10 @@
 		99E5E2E42BA1EB92008F363A /* NSManagedObjectSubclasses */ = {
 			isa = PBXGroup;
 			children = (
-				99E5E2DD2B9E1544008F363A /* DataVersion+CoreDataProperties.swift */,
-				99E5E2DC2B9E1544008F363A /* DataVersion+CoreDataClass.swift */,
-				99E5E2DB2B9E1544008F363A /* Task+CoreDataProperties.swift */,
-				99E5E2DA2B9E1544008F363A /* Task+CoreDataClass.swift */,
-				99E5E2D92B9E1544008F363A /* GlobalTasks+CoreDataProperties.swift */,
-				99E5E2D82B9E1544008F363A /* GlobalTasks+CoreDataClass.swift */,
+				99E5E3082BB5B594008F363A /* DataVersion+CoreDataClass.swift */,
+				99E5E3092BB5B594008F363A /* DataVersion+CoreDataProperties.swift */,
+				99E5E2F62BA59A36008F363A /* Task+CoreDataClass.swift */,
+				99E5E2F72BA59A36008F363A /* Task+CoreDataProperties.swift */,
 			);
 			path = NSManagedObjectSubclasses;
 			sourceTree = "<group>";
@@ -158,7 +149,6 @@
 			isa = PBXGroup;
 			children = (
 				99E5E2E52BA1ED32008F363A /* CoreData */,
-				99E5E2BD2B99B850008F363A /* Tree */,
 				99FAC0C82B7E5C12009239A7 /* Helpers */,
 				99FAC0C72B7E5364009239A7 /* Protocols */,
 				99FAC0C52B7E52F2009239A7 /* ViewControllers */,
@@ -181,11 +171,11 @@
 				99E5E2E42BA1EB92008F363A /* NSManagedObjectSubclasses */,
 				99FAC0B92B7E3A29009239A7 /* TasksManager.swift */,
 				99FAC0B32B7E25B5009239A7 /* TaskComponent.swift */,
-				99FAC0B52B7E2F0D009239A7 /* Subtask.swift */,
 				99FAC0B72B7E310A009239A7 /* Task.swift */,
 				99E5E2C62B9E11FF008F363A /* DataManager.swift */,
 				99E5E2C82B9E1214008F363A /* RemoteStorage.swift */,
 				99E5E2CA2B9E121E008F363A /* LocalStorage.swift */,
+				99E5E2FE2BA5BFE3008F363A /* ServideIDEnum.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -250,6 +240,7 @@
 			children = (
 				99E5E2BA2B960A4B008F363A /* UIViews */,
 				99FAC0C92B7E5C2D009239A7 /* ThrowErrorHelper.swift */,
+				99E5E2EA2BA4AABA008F363A /* getDateString.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -267,6 +258,7 @@
 			children = (
 				99FAC0CE2B7E629B009239A7 /* NavigationRouter.swift */,
 				99FAC0D32B7E662E009239A7 /* NavigationRouterNavigationControllerDelegateExtension.swift */,
+				99E5E30C2BB5C84E008F363A /* ModalNavigationRouter.swift */,
 			);
 			path = NavigationRouter;
 			sourceTree = "<group>";
@@ -343,19 +335,17 @@
 			files = (
 				99E5E2C52B9E0E0A008F363A /* Task.xcdatamodeld in Sources */,
 				99FAC0BD2B7E3C61009239A7 /* TasksCoordinator.swift in Sources */,
-				99E5E2E32B9E1544008F363A /* DataVersion+CoreDataProperties.swift in Sources */,
+				99E5E2EB2BA4AABA008F363A /* getDateString.swift in Sources */,
 				99E5E2C92B9E1214008F363A /* RemoteStorage.swift in Sources */,
-				99FAC0B62B7E2F0D009239A7 /* Subtask.swift in Sources */,
-				99E5E2DE2B9E1544008F363A /* GlobalTasks+CoreDataClass.swift in Sources */,
 				99E5E2BC2B960A60008F363A /* AddTaskButton.swift in Sources */,
+				99E5E30B2BB5B594008F363A /* DataVersion+CoreDataProperties.swift in Sources */,
+				99E5E2FA2BA59A36008F363A /* Task+CoreDataClass.swift in Sources */,
 				99E5E2C02B99BA01008F363A /* AddTaskViewController.swift in Sources */,
 				99FAC0C32B7E4182009239A7 /* Router.swift in Sources */,
 				99E5E2E72BA1ED3F008F363A /* CoreDataStack.swift in Sources */,
 				99E5E2E92BA2019A008F363A /* AddTaskViewCotnroller + TextViewDelegate.swift in Sources */,
-				99E5E2E22B9E1544008F363A /* DataVersion+CoreDataClass.swift in Sources */,
 				99FAC0BA2B7E3A29009239A7 /* TasksManager.swift in Sources */,
 				99FAC0B42B7E25B5009239A7 /* TaskComponent.swift in Sources */,
-				99E5E2E02B9E1544008F363A /* Task+CoreDataClass.swift in Sources */,
 				99FAC0A32B7E2592009239A7 /* TasksViewController.swift in Sources */,
 				99E5E2B52B9333DD008F363A /* TasksViewController+TableViewDataSource.swift in Sources */,
 				99E5E2B32B932DB2008F363A /* TasksTableViewCell.swift in Sources */,
@@ -363,8 +353,9 @@
 				99E5E2B72B93349A008F363A /* TasksViewController+TableViewDelegate.swift in Sources */,
 				99FAC0D42B7E662E009239A7 /* NavigationRouterNavigationControllerDelegateExtension.swift in Sources */,
 				99FAC09F2B7E2592009239A7 /* AppDelegate.swift in Sources */,
-				99E5E2E12B9E1544008F363A /* Task+CoreDataProperties.swift in Sources */,
-				99E5E2DF2B9E1544008F363A /* GlobalTasks+CoreDataProperties.swift in Sources */,
+				99E5E30D2BB5C84E008F363A /* ModalNavigationRouter.swift in Sources */,
+				99E5E2FF2BA5BFE3008F363A /* ServideIDEnum.swift in Sources */,
+				99E5E30A2BB5B594008F363A /* DataVersion+CoreDataClass.swift in Sources */,
 				99FAC0B82B7E310A009239A7 /* Task.swift in Sources */,
 				99FAC0A12B7E2592009239A7 /* SceneDelegate.swift in Sources */,
 				99FAC0CF2B7E629B009239A7 /* NavigationRouter.swift in Sources */,
@@ -372,6 +363,7 @@
 				99E5E2C72B9E11FF008F363A /* DataManager.swift in Sources */,
 				99E5E2CB2B9E121E008F363A /* LocalStorage.swift in Sources */,
 				99FAC0CD2B7E5E95009239A7 /* SceneDelegateHelpersExtension.swift in Sources */,
+				99E5E2FB2BA59A36008F363A /* Task+CoreDataProperties.swift in Sources */,
 				99E5E2C22B99BEE7008F363A /* AddTaskCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

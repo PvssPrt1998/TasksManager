@@ -18,6 +18,12 @@ extension TasksViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tasksManager.setCurrentTask(by: tasksManager.getCurrentTaskSubtask(by: indexPath.row))
+        print("CURRENTTASKTITLE: \(tasksManager.getCurrentTaskTitle())")
+        delegate?.openTask(self, onDismissed: onDismissed)
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
     }
 }

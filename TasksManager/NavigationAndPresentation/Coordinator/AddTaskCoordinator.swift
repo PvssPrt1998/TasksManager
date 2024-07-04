@@ -12,18 +12,22 @@ public class AddTaskCoordinator: Coordinator {
     var children: [Coordinator] = []
     
     var router: Router
+    var tasksManager: TasksManager
     
-    public init(router: Router) {
+    init(router: Router, tasksManager: TasksManager) {
         self.router = router
+        self.tasksManager = tasksManager
     }
     
     func present(animated: Bool, onDismissed: (() -> Void)?) {
-        router.present(AddTaskViewController(delegate: self), animated: animated, onDismissed: onDismissed)
+        router.present(AddTaskViewController(delegate: self, tasksManager: tasksManager), animated: animated, onDismissed: onDismissed)
     }
 }
 
 extension AddTaskCoordinator: AddTaskViewControllerDelegate {
-    func addTask(_ viewController: TasksViewController, onDismissed: (() -> Void)?) {
-        
+    func addTaskButtonPressed() {
+        print("AddTaskCoordinator Dissmiss begin")
+        dismiss(animated: true)
+        print("AddTaskCoordinator Dissmiss end")
     }
 }

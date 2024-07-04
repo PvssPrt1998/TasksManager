@@ -9,21 +9,15 @@ import UIKit
 
 extension TasksViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        0//taskArray.count
+        tasksManager.getCountCurrentTaskSubtasks()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: TasksTableViewCell.reuseIdentifier) as? TasksTableViewCell else {
             fatalError("The TableView could not dequeue a Custom Cell in ViewController")
         }
-        
-//        if !taskArray[indexPath.row].isFinalTask() {
-//            cell.taskType(.composite)
-//        } else { cell.taskType(.final) }
-//        
-//        cell.setTitle(taskArray[indexPath.row].title)
-//        cell.setDescription(taskArray[indexPath.row].description)
-        
+        cell.setTitle(tasksManager.getTaskTitle(by: tasksManager.getCurrentTaskSubtask(by: indexPath.row)))
+        cell.setDescription(tasksManager.getTaskDescription(by: tasksManager.getCurrentTaskSubtask(by: indexPath.row)))
         return cell
     }
 }
